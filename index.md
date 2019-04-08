@@ -32,7 +32,6 @@
 			var videoList = response.result.items;
 			console.log(videoList);
 			console.log(response.result.items[0].id);
-			var 
               },
               function(err) { console.error("Execute error", err); });
   }
