@@ -22,7 +22,7 @@
         .then(function(response) {
                 // Handle the results here (response.result has the parsed body).
                 //console.log("Response", response);
-				console.log(response.result.item);
+				console.log(response.result);
               },
               function(err) { console.error("Execute error", err); });
   }
