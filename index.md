@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html >
+<head>
+<title>Pinterest RSS Feed</title>
+</head>
+
+<body>
 <script src="https://apis.google.com/js/api.js"></script>
 <script>
   /**
@@ -20,21 +27,22 @@
       "regionCode": "US"
     })
         .then(function(response) {
-                // Handle the results here (response.result has the parsed body).
-                //console.log("Response", response);
-			console.log("items");
-			console.log(response.result.items);
-			console.log("item");
-			console.log(response.result.items[0].id);
+			var videoList = response.result.items;
+			videoList.forEach(retrieveVideo);
+			var 
               },
               function(err) { console.error("Execute error", err); });
   }
   gapi.load("client");
+  
+  function retrieveVideo(value, index, array){
+		console.log(value.id);
+  }
+  
 </script>
 <button onclick="loadClient()">load</button>
-<button onclick="execute()">execute</button>
-
-
-
+<button onclick="execute()">execute</button> 
 <!-- Embedded Video -->
-
+<!--<iframe width="560" height="315" src="http://www.youtube.com/embed/ijROuD8jCeo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+</body>
+</html>
