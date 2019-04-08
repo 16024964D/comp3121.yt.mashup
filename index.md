@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html >
 <head>
-<title>Pinterest RSS Feed</title>
+<title>Youtube Top 5</title>
 </head>
 
 <body>
@@ -29,7 +29,6 @@
         .then(function(response) {
 			var videoList = response.result.items;
 			videoList.forEach(retrieveVideo);
-			var 
               },
               function(err) { console.error("Execute error", err); });
   }
