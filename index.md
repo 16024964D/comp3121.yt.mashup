@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html >
 <head>
-<title>Youtube Top 5</title>
+<title>Pinterest RSS Feed</title>
 </head>
 
 <body>
@@ -27,17 +27,16 @@
       "regionCode": "US"
     })
         .then(function(response) {
+                // Handle the results here (response.result has the parsed body).
+                //console.log("Response", response);
 			var videoList = response.result.items;
-			videoList.forEach(retrieveVideo);
+			console.log(videoList);
+			console.log(response.result.items[0].id);
+			var 
               },
               function(err) { console.error("Execute error", err); });
   }
   gapi.load("client");
-  
-  function retrieveVideo(value, index, array){
-		console.log(value.id);
-  }
-  
 </script>
 <button onclick="loadClient()">load</button>
 <button onclick="execute()">execute</button> 
