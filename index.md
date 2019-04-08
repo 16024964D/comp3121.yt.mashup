@@ -7,11 +7,9 @@
 <body>
 <script src="https://apis.google.com/js/api.js"></script>
 <script>
-  /**
-   * Sample JavaScript code for youtube.videos.list
-   * See instructions for running APIs Explorer code samples locally:
-   * https://developers.google.com/explorer-help/guides/code_samples#javascript
-   */
+	function getID(val) {
+		console.log(val);
+	}
 
   function loadClient() {
     gapi.client.setApiKey("AIzaSyAYTm2gGb3Dg6xhmr7MHNxLMreiX8-BRgE");
@@ -29,13 +27,16 @@
         .then(function(response) {
                 // Handle the results here (response.result has the parsed body).
                 //console.log("Response", response);
-			var videoList = response.result.items;
-			console.log(videoList);
-			console.log(response.result.items[0].id);
+			var respList = response.result.items;
+			respList.forEach(getID)
+			//console.log(response.result.items[0].id);
               },
               function(err) { console.error("Execute error", err); });
   }
   gapi.load("client");
+  
+  
+	
 </script>
 <button onclick="loadClient()">load</button>
 <button onclick="execute()">execute</button> 
