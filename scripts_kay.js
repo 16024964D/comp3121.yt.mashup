@@ -7,9 +7,9 @@
 	
 	var ytAttr = {"width":"300","height":"300","frameborder":"0","allow":"autoplay; encrypted-media"};
 	
-	var ytDiv = document.createElement('div');
+	/*var ytDiv = document.createElement('div');
 	ytDiv.setAttribute('id', 'ytDiv');	
-	document.getElementById("ytDiv").style.width = "300px";
+	document.getElementById("ytDiv").style.width = "300px";*/
 	
 	function getVideo(val) {
 		var ytTitle = document.createElement('h2');
@@ -18,11 +18,15 @@
 		setAttributes(ytVideo, ytAttr);
 		var ytURL = "http://www.youtube.com/embed/"+val.id;
 		ytVideo.setAttribute('src', ytURL);
-		ytDiv.appendChild(ytTitle); 
-		ytDiv.appendChild(ytVideo); 
-		ytDiv.appendChild(document.createElement("br"));
 		
-		var test123 = document.getElementById("Kay");	
+		/*ytDiv.appendChild(ytTitle); 
+		ytDiv.appendChild(ytVideo); 
+		ytDiv.appendChild(document.createElement("br"));*/
+				
+		document.getElementById("Kay").appendChild(ytTitle); 
+		document.getElementById("Kay").appendChild(ytVideo); 
+		document.getElementById("Kay").appendChild(document.createElement("br"));
+		
 	}
 
 	
