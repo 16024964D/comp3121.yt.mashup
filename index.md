@@ -1,46 +1,85 @@
 <!DOCTYPE html>
-<html >
+<html>
 <head>
-<title>Pinterest RSS Feed</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://apis.google.com/js/api.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137428551-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-137428551-1');
+
+</script>
+<script type="text/javascript">
+var queryString = window.location.search.slice(1);
+if (queryString){
+qString = queryString.split('q=')[1].split('&')[0];
+alert(qString);
+
+}
+
+</script>
+<script src="scripts_david.js"></script>
+<script src="scripts_hong.js"></script>
+<script src="scripts_kay.js"></script>
+
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+<script src="scripts_alan.js"></script>
+<link rel="stylesheet" type="text/css" href="css_alan.css">
+<script src="scripts_ronald.js"></script>
+<style>
+table {
+    table-layout : fixed;
+	width: 100%;
+}
+table, th, td {
+  border: 1px solid black;
+
+  border-collapse: collapse;
+  padding: 5px;
+}
+td {
+vertical-align: top;
+
+}
+</style>
 </head>
 
 <body>
-<script src="https://apis.google.com/js/api.js"></script>
-<script>
-	function getID(val) {
-		console.log(val);
-	}
+<table>
+<tr>
+<th>Ronald</th>
+<th>Kay</th>
+<th>Alan</th>
+<th>Edward</th>
+<th>Hong</th>
+<th>David</th>
+</tr>
+<tr>
+<td><div id="Ronald"></div>
+</td>
+<td><div id="Kay"></div>
+</td>
+<td><div id="Alan"></div>
+</td>
+<td><div id="Edward"></div>
+</td>
+<td><div id="Hong"><h2>Recent Gallery</h2><div id="flickr"/></div>
+</td>
+<td><div id="david"></div>
+</td>
 
-  function loadClient() {
-    gapi.client.setApiKey("AIzaSyAYTm2gGb3Dg6xhmr7MHNxLMreiX8-BRgE");
-    return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
-        .then(function() { console.log("GAPI client loaded for API"); },
-              function(err) { console.error("Error loading GAPI client for API", err); });
-  }
-  // Make sure the client is loaded before calling this method.
-  function execute() {
-    return gapi.client.youtube.videos.list({
-      "part": "snippet,contentDetails,statistics",
-      "chart": "mostPopular",
-      "regionCode": "US"
-    })
-        .then(function(response) {
-                // Handle the results here (response.result has the parsed body).
-                //console.log("Response", response);
-			var respList = response.result.items;
-			respList.forEach(getID)
-			//console.log(response.result.items[0].id);
-              },
-              function(err) { console.error("Execute error", err); });
-  }
-  gapi.load("client");
+
+</tr>
+
+</table>
   
-  
-	
-</script>
-<button onclick="loadClient()">load</button>
-<button onclick="execute()">execute</button> 
-<!-- Embedded Video -->
-<!--<iframe width="560" height="315" src="http://www.youtube.com/embed/ijROuD8jCeo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+    
 </body>
+
+
+
 </html>
