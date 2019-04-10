@@ -4,14 +4,13 @@
 			el.setAttribute(key, attrs[key])
 	}
 
-	var kayDiv = document.getElementById("Kay");
 	
 	var ytAttr = {"width":"300","height":"300","frameborder":"0","allow":"autoplay; encrypted-media"};
 	
 	var ytDiv = document.createElement('div');
 	ytDiv.setAttribute('id', 'ytDiv');
 	
-	kayDiv.appendChild(ytDiv);	
+	document.getElementById("Alan").appendChild(ytDiv);	
 	
 	document.getElementById("ytDiv").style.width = "300px";
 	
