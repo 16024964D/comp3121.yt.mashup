@@ -22,13 +22,11 @@ alert(qString);
 }
 
 </script>
-<script src="scripts_david.js"></script>
-<script src="scripts_hong.js"></script>
+
 <script src="scripts_kay.js"></script>
 
 <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
-<script src="scripts_alan.js"></script>
-<link rel="stylesheet" type="text/css" href="css_alan.css">
+
 
 <style>
 table {
