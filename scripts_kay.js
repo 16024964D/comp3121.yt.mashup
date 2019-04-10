@@ -8,10 +8,7 @@
 	var ytAttr = {"width":"300","height":"300","frameborder":"0","allow":"autoplay; encrypted-media"};
 	
 	var ytDiv = document.createElement('div');
-	ytDiv.setAttribute('id', 'ytDiv');
-	
-	document.getElementById("Kay").appendChild(ytDiv);	
-	
+	ytDiv.setAttribute('id', 'ytDiv');	
 	document.getElementById("ytDiv").style.width = "300px";
 	
 	function getVideo(val) {
@@ -24,6 +21,8 @@
 		ytDiv.appendChild(ytTitle); 
 		ytDiv.appendChild(ytVideo); 
 		ytDiv.appendChild(document.createElement("br"));
+		
+		var test123 = document.getElementById("Kay");	
 	}
 
 	
