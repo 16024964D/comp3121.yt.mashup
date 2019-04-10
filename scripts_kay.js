@@ -16,7 +16,7 @@
 		ytTitle.textContent = val.snippet.title;
 		var ytVideo = document.createElement('iframe');
 		setAttributes(ytVideo, ytAttr);
-		var ytURL = "http://www.youtube.com/embed/"+val.id;
+		var ytURL = "https://www.youtube.com/embed/"+val.id;
 		ytVideo.setAttribute('src', ytURL);
 		
 		/*ytDiv.appendChild(ytTitle); 
