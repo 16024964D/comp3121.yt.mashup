@@ -4,7 +4,7 @@
 			el.setAttribute(key, attrs[key])
 	}
 
-	var kayDiv = getElementById("Kay");
+	var kayDiv = document.getElementById("Kay");
 	
 	var ytAttr = {"width":"300","height":"300","frameborder":"0","allow":"autoplay; encrypted-media"};
 	
